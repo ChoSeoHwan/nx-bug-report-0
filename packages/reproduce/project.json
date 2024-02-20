@@ -1,0 +1,19 @@
+{
+  "name": "reproduce",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/reproduce/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/reproduce",
+        "main": "packages/reproduce/src/index.ts",
+        "tsConfig": "packages/reproduce/tsconfig.lib.json",
+        "assets": ["packages/reproduce/*.md"]
+      }
+    }
+  },
+  "tags": []
+}
